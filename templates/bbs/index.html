@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>簡易掲示板</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <main class="container">
+        <form action="" method="POST">
+            {% csrf_token %}
+                <input type="checkbox" style="transform: scale(1.5); margin: 14px 10px 6px 6px;" name="chk_rikaido_kensaku" id="chk_m1" value="-1"><label for="chk_m1" class="badge bg-secondary fs-6">未設定</label>
+                <input type="checkbox" style="transform: scale(1.5); margin: 14px 10px 6px 6px;" name="chk_rikaido_kensaku" id="chk_0" value="0"><label for="chk_0" class="badge bg-danger fs-6">0 %</label>
+                <input type="checkbox" style="transform: scale(1.5); margin: 14px 10px 6px 6px;" name="chk_rikaido_kensaku" id="chk_25" value="25"><label for="chk_25" class="badge bg-warning text-dark fs-6">25 %</label><br>
+                <input type="checkbox" style="transform: scale(1.5); margin: 14px 10px 6px 6px;" name="chk_rikaido_kensaku" id="chk_50" value="50"><label for="chk_50" class="badge bg-success fs-6">50 %</label>
+                <input type="checkbox" style="transform: scale(1.5); margin: 14px 10px 6px 6px;" name="chk_rikaido_kensaku" id="chk_75" value="75"><label for="chk_75" class="badge bg-info fs-6">75 %</label>
+                <input type="checkbox" style="transform: scale(1.5); margin: 14px 10px 6px 6px;" name="chk_rikaido_kensaku" id="chk_100" value="100"><label for="chk_100" class="badge bg-primary fs-6">100 %</label><br>
+                <input type="submit" class="btn btn-outline-dark btn-sm" value="選択してから、押してね！" style="transform: scale(1.0); margin: 14px 10px 6px 110px;">
+                <input type="submit" value="送信">
+        </form>
+
+    </main>
+</body>
+</html>
